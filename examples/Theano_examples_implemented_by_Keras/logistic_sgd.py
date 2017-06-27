@@ -20,7 +20,7 @@ def load_data(data_file):
 
 
 # LogisticRegression using Keras
-def LogisticRegression(input_shape=None, activation='softmax', num_classes=10, num_hidden=200):
+def LogisticRegression(input_shape=None, activation='softmax', num_classes=10):
     
     img_input = Input(shape=input_shape)
     x = Dense(units=num_classes, activation=activation, name='logistic_regression')(img_input)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     print(train_set[0].shape,train_set[1].shape)
     
     # Set parameters
-    batch_size = 600
+    batch_size = 6000
     num_classes = 10
     lr = 0.1
     epoch_per_batch = 3
